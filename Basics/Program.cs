@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic;
+using System.Threading.Channels;
 
 namespace Maths  // Collection of classes
 {
@@ -280,7 +281,107 @@ namespace Maths  // Collection of classes
         //    }
         //}
 
+        // For loop Continue
+        //static void Main()
+        //{
+        //    for (int i = 2; i <= 10; i++)
+        //    {
+        //        if (i % 2 == 0) // if 5 then i dont want to show the results 
+        //        {
+        //            continue;
+        //        }
+        //        Console.WriteLine(i*i);
+        //    }
+        //}
 
+        // For loop break
+        //static void Main()
+        //{
+        //    for (int i = 0; i < 10; i++)
+        //    {
+        //        if (i == 5) // loop break at five
+        //            break;
+        //        Console.WriteLine(i);
+        //    }
+        //    Console.WriteLine("Loop disconnect from the flow");
+        //}
+
+        // while - example -1 
+        //static void Main()
+        //{
+        //    Console.WriteLine("Enter the value for N");
+        //    int n = int.Parse(Console.ReadLine()); //5
+
+        //    int i = 0;
+        //    while (i<n)
+        //    {
+        //        // Come to this line if the condition is true
+        //        Console.WriteLine(i);
+        //        i = i + 1; // i++
+
+        //        if (i == 4)
+        //            break;
+
+        //    }
+        //    // if the condition is false
+        //}
+
+        // while - example -2
+
+        //static void Main()
+        //{
+        //    string choice = string.Empty;
+        //    Console.WriteLine("Enter your choice (Type Continue to Get the input, show the result");
+        //    choice = Console.ReadLine();
+        //    int a = 0;
+        //    int b = 0;
+        //    int result = 0;
+
+        //    while (choice == "Continue")
+        //    {
+        //        Console.WriteLine("Enter the value for A");
+        //        a = int.Parse(Console.ReadLine());
+        //        Console.WriteLine("Enter the value for B");
+        //        b = int.Parse(Console.ReadLine());
+
+        //        result = a + b;
+        //        Console.WriteLine("The result is " + result);
+
+        //        Console.WriteLine("Enter your choice (Type Continue to Get the input, show the result, other values to exit");
+
+        //        choice = Console.ReadLine();
+
+        //    }
+        //}
+
+        // do while - example -1
+        //static void Main()
+        //{
+        //    string choice = string.Empty;
+        //    int a = 0;
+        //    int b = 0;
+        //    int result = 0;
+        //    do
+        //    {
+        //        Console.WriteLine("Enter the value for A");
+        //        a = int.Parse(Console.ReadLine());
+        //        Console.WriteLine("Enter the value for B");
+        //        b = int.Parse(Console.ReadLine());
+
+        //        result = a + b;
+        //        Console.WriteLine("The result is " + result);
+
+        //        Console.WriteLine("Enter your choice (Type Continue to Get the input, show the result, other values to exit");
+        //        choice = Console.ReadLine();
+        //    } while (choice == "Continue");
+
+
+        //}
+
+        // Write a program to print the table of 5 using while loop
+        // write a program to print the folwoing 10,15,20,25,30,35,40,45,50 ..... N
+        // f=-1,s=1, t=f+s
+        // 0,1,1,2,3,5,8,13 .... N
     }
 }
 
