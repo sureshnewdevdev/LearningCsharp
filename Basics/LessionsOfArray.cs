@@ -59,5 +59,37 @@ namespace Basics
                 Console.WriteLine("Number at index " + i + " is " + numbers[i]);
             }
         }
+
+        public void FindASmallestValue()
+        {
+            Console.WriteLine("Enter the number of values in an Array");
+            int numberOfElements = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the number elements in array");
+            int[] numbers = new int[numberOfElements];
+
+            for (int i = 0; i < numberOfElements; i++)
+            {
+                Console.WriteLine("Enter the number");
+                numbers[i] = int.Parse(Console.ReadLine());
+            }
+
+            int smallest = FindSmallest(numberOfElements, numbers);
+
+            Console.WriteLine("The smallest value is ", smallest);
+        }
+
+        private static int FindSmallest(int numberOfElements, int[] numbers)
+        {
+            int smallest = numbers[0];
+            for (int i = 1; i < numberOfElements; i++)
+            {
+                if (numbers[i] < smallest)
+                {
+                    smallest = numbers[i];
+                }
+            }
+
+            return smallest;
+        }
     }
-}
