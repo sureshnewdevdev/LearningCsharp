@@ -382,6 +382,53 @@ namespace Maths  // Collection of classes
         // write a program to print the folwoing 10,15,20,25,30,35,40,45,50 ..... N
         // f=-1,s=1, t=f+s
         // 0,1,1,2,3,5,8,13 .... N
+        // Prime number  -- n/1 and n/n . In between no other values can be divided and bring reminder is zero.
+        // 5/1, 5/2, 5/3,5/4.5/5
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the value for n");
+            int maxLimit = int.Parse(Console.ReadLine());
+            if (maxLimit <= 0)
+            {
+                Console.WriteLine("Invlid input");
+                return;
+            }
+
+            Console.WriteLine("Prime number are ...");
+            if (maxLimit >= 2)
+            {
+                Console.WriteLine(2);
+            }
+            // this function check each value and print that value is prime or not
+            for (int i = 3; i <= maxLimit; i=i+2)
+            {
+                if (IsPrime(i))
+                {
+                    Console.WriteLine(i);
+                }
+            }
+            
+        }
+
+        /// <summary>
+        /// This function check the number is prime or not
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        private static bool IsPrime(int n)
+        {
+            int c = 0;
+            for (int i = 2; i <= n-1; i++)
+            {
+                if (n % i == 0)
+                {
+                    return false;
+                }
+
+            }
+            return true;
+        }
     }
 }
 
