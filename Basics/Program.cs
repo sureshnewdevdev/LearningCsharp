@@ -435,8 +435,11 @@ namespace Maths  // Collection of classes
        
         static void Main()
         {
-            LessionsOfArray obj = new LessionsOfArray();
-            obj.ArrayExample();
+            //LessionsOfArray obj = new LessionsOfArray();
+            //obj.ArrayExample();
+
+            LessionsOnMultiDimensionArray obj = new LessionsOnMultiDimensionArray();
+            obj.MultiDimensionArrayExample1();
         }
 
     }
