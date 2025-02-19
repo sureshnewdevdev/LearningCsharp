@@ -5,6 +5,12 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <StartupObject>Basics.PropertyStart</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="BankAccount.cs" />
+    <Compile Remove="LinqSamples.cs" />
+  </ItemGroup>
 
 </Project>

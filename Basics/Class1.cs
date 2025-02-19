@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Basics
 {
-    public class Class1
+    public class MathsMeathods
     {
         public virtual void Do1()
         {
