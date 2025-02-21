@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 // Collection of member variables and functions
 namespace Basics
 {
-    public class Employee
+    public class EmployeeCls
     {
         public int Id;
         public string Name;

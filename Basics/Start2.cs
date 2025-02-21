@@ -88,6 +88,18 @@ namespace Basics
             Console.WriteLine(account.AccountName);
             //Console.WriteLine(account.AccountId);
 
+            Simple simple = new Simple();
+
+            Object obj = new Object();
+          
+
+            int n = 10;
+
+            obj = n; // boxing
+            obj = simple;
+
+            int m = (int)obj; // unboxing
+
             Console.ReadLine();
 
         }
