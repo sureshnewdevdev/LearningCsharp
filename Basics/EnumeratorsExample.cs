@@ -22,6 +22,7 @@ namespace Basics
                     return "100";
                     break;
                 case AvailableProducts.Mango:
+                    var tt = Gravity.Speed;
                     return "200";
 
                     break;

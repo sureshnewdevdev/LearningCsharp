@@ -54,7 +54,7 @@ namespace Basics
             //MyProtectedClass myProtectedClass = new MyProtectedClass(); // Only Same family members
             //can Access other members cant access these protect
 
-            iamPublicClass.IamProerties = 1;
+            //iamPublicClass.IamProerties = 1;
 
         }
     }
