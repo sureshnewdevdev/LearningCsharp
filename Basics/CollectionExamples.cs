@@ -49,6 +49,8 @@ namespace Basics
 
         private static void QueueExample()
         {
+
+           
             // Creating a Queue
             Queue queue = new Queue();
 
@@ -56,6 +58,7 @@ namespace Basics
             queue.Enqueue("First");
             queue.Enqueue("Second");
             queue.Enqueue("Third");
+            queue.Enqueue(4);
 
             // Dequeueing (removes front)
             Console.WriteLine("Dequeued: " + queue.Dequeue());
