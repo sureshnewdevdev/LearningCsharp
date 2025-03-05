@@ -11,6 +11,7 @@ namespace Basics
     {
         public int PersonId { get; set; }
         public string PersonName { get; set; }
+        public int Age { get; internal set; }
     }
 
     public class Man : Person
