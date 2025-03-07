@@ -232,12 +232,6 @@ namespace Basics
                 Console.WriteLine( ss.Category);
             }
 
-
-
-
-
-
-
         }
     }
 }
