@@ -6,63 +6,57 @@ using System.Threading.Tasks;
 
 namespace Basics
 {
+    
+    public class EvenGenericCollection<T>
+    { 
+       private List<T> list = new List<T>();
 
-
-    public class MyCollection<T>
-    {
-
-        private List<T> collectionValues;
-
-        public List<T> CollectionValues
+        public void Add(T value)
         {
-            get
-            {
-                return collectionValues;
-            }
-
-            set
-            {
-                
-                collectionValues = value;
-            }
+            list.Add(value);
         }
-        public void AddItems(T t)
+        public void Display()
         {
-            if (collectionValues.Count > 5)
+            foreach (T item in list)
             {
-                throw new Exception("Max values allowed is 5");
-            }
-            collectionValues.Add(t);
-        }
-        private T myProperty { get; set; }
-
-        public T MyProperty
-        {
-            get
-            {
-                return myProperty;
-            }
-            set
-            {
-                if (value == null)
-                    throw new Exception("My property should not me null");
-                myProperty = value;
+                Console.WriteLine(item);
             }
         }
 
-
+        public void DisplayEvenIndexValues()
+        {
+            int length = list.Count;
+            for (int i = 1; i < length; i=i+2)
+            {
+               Console.WriteLine(list[i]);
+            }
+        }
     }
     public class GernericsCreateExample
     {
         public static void Main(string[] args)
         {
-            MyCollection<int> myCollection = new MyCollection<int>();
-            myCollection.MyProperty = 10;
-            Console.WriteLine(myCollection.MyProperty);
+            List<int> list = new List<int>();
+            list.Add(1);
+            list.Add(2);
+            list.Add(3);
+            List<string> listStr = new List<string>();
 
-            MyCollection<string> names = new MyCollection<string>();
-            names.MyProperty = "Raju";
-            Console.WriteLine(names.MyProperty);
+            EvenGenericCollection<int> evenInt = new EvenGenericCollection<int>();
+            evenInt.Add(1);
+            evenInt.Add(2);
+            evenInt.Add(3);
+            evenInt.Add(4);
+            evenInt.Add(5);
+            evenInt.Add(6);
+            evenInt.Add(7);
+            evenInt.Add(8);
+            evenInt.Add(9);
+            evenInt.Add(10);
+
+            evenInt.Display();
+            Console.WriteLine("************************************************************");
+            evenInt.DisplayEvenIndexValues();
         }
     }
 }
