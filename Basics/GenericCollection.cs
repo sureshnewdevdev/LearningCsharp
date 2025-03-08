@@ -6,10 +6,18 @@ using System.Threading.Tasks;
 
 namespace Basics
 {
-    
-    public class EvenGenericCollection<T>
-    { 
-       private List<T> list = new List<T>();
+    public interface IEvenCollection<T>
+    {
+        void Add(T value);
+        void Display();
+        void DisplayEvenIndexValues();
+
+        void DisplayOddIndexValues();
+    }
+
+    public class EvenGenericCollection2<T> : IEvenCollection<T>
+    {
+        private List<T> list = new List<T>();
 
         public void Add(T value)
         {
@@ -26,12 +34,81 @@ namespace Basics
         public void DisplayEvenIndexValues()
         {
             int length = list.Count;
-            for (int i = 1; i < length; i=i+2)
+            for (int i = 1; i < length; i = i + 2)
             {
-               Console.WriteLine(list[i]);
+                Console.WriteLine(list[i]);
+            }
+        }
+
+        public void DisplayOddIndexValues()
+        {
+            int length = list.Count;
+            for (int i = 0; i < length; i = i + 2)
+            {
+                Console.WriteLine(list[i]);
             }
         }
     }
+
+    public class EvenGenericCollection<T> : IEvenCollection<T>
+    {
+        private List<T> list = new List<T>();
+
+        public void Add(T value)
+        {
+            list.Add(value);
+        }
+        public void Display()
+        {
+            foreach (T item in list)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        public void DisplayEvenIndexValues()
+        {
+            int length = list.Count;
+            for (int i = 1; i < length; i = i + 2)
+            {
+                Console.WriteLine(list[i]);
+            }
+        }
+
+        public void DisplayOddIndexValues()
+        {
+            int length = list.Count;
+            for (int i = 1; i < length; i = i + 2)
+            {
+                Console.WriteLine(list[i]);
+            }
+        }
+    }
+    //public class EvenGenericCollection<T>
+    //{ 
+    //   private List<T> list = new List<T>();
+
+    //    public void Add(T value)
+    //    {
+    //        list.Add(value);
+    //    }
+    //    public void Display()
+    //    {
+    //        foreach (T item in list)
+    //        {
+    //            Console.WriteLine(item);
+    //        }
+    //    }
+
+    //    public void DisplayEvenIndexValues()
+    //    {
+    //        int length = list.Count;
+    //        for (int i = 1; i < length; i=i+2)
+    //        {
+    //           Console.WriteLine(list[i]);
+    //        }
+    //    }
+    //}
     public class GernericsCreateExample
     {
         public static void Main(string[] args)
@@ -57,6 +134,16 @@ namespace Basics
             evenInt.Display();
             Console.WriteLine("************************************************************");
             evenInt.DisplayEvenIndexValues();
+
+            EvenGenericCollection2<int> evenInt2 = new EvenGenericCollection2<int>();
+
+            SomeMethod(evenInt);
+            SomeMethod(evenInt2);
+        }
+
+        private static void SomeMethod(IEvenCollection<int> evenInt)
+        {
+            throw new NotImplementedException();
         }
     }
 }
