@@ -131,6 +131,8 @@ namespace Basics
             evenInt.Add(9);
             evenInt.Add(10);
 
+
+            Console.WriteLine();
             evenInt.Display();
             Console.WriteLine("************************************************************");
             evenInt.DisplayEvenIndexValues();
