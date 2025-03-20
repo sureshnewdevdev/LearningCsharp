@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace Basics
 {
     public delegate void DisplayDelegate();
+    public delegate int AddDelegate(int a, int b);
     public class ExampleOfDelegate
     {
         int x = 100;

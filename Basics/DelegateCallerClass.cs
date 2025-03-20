@@ -11,7 +11,8 @@ namespace Basics
         public static void Main()
         {
             ExampleOfDelegate myProhram = new ExampleOfDelegate();
-            myProhram.DisplayDelegateProperty = new DisplayDelegate(MyClientMethodVersion2);
+            myProhram.DisplayDelegateProperty = new DisplayDelegate(MyClientMethod);
+            myProhram.DisplayDelegateProperty += new DisplayDelegate(MyClientMethodVersion2);
             myProhram.CallDelegateMwthod();
         }
 
