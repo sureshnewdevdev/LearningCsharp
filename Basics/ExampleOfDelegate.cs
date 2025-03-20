@@ -14,16 +14,34 @@ namespace Basics
         DisplayDelegate displayDelegate = new DisplayDelegate(MyBestDelegatedMethod);
         //public DisplayDelegate MyDelegateProperty { get; set; }
 
+
+        public DisplayDelegate DisplayDelegateProperty { get; set; }
         public static void Main()
         {
+
+            
+
             ExampleOfDelegate myProhram = new ExampleOfDelegate();
-            myProhram.displayDelegate();
-            myProhram.displayDelegate = new DisplayDelegate(MyDelegatedMethod);
-            myProhram.displayDelegate();
+            myProhram.CallDelegateMwthod();
+
+
+            //myProhram.displayDelegate();
+            //myProhram.displayDelegate = new DisplayDelegate(MyDelegatedMethod);
+            //myProhram.displayDelegate();
 
         }
 
-
+        public void CallDelegateMwthod()
+        {
+            if (DisplayDelegateProperty != null)
+            {
+                DisplayDelegateProperty();
+            }
+            else
+            {
+                Console.WriteLine("Delegate is not assigned");
+            }
+        }
 
         private static void MyDelegatedMethod()
         {
